@@ -8,3 +8,5 @@ def lambda_handler(event, context):
 		},
 		"body": "DevOps Tinman"
 	}
+	
+	return resp
