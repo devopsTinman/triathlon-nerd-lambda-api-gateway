@@ -1,6 +1,19 @@
 <html>
+	<script>
+	function startupFunction() {
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				document.getElementById("triathlon-nerd-demo").innerHTML = this.responseText;
+			}
+		}
+	}
+	</script>
 	<head><title>Hello Triathlon Nerds</title></head>
-	<body><h1>Hello Triathlon Nerds</h2>
-	<h2>Welcome to our serverless website</h2>
+	<body>
+		<div align="center"><br/><br/><br/><br/>
+	Hello <span id="triathlon-nerd-demo">Triathlon Nerds</span>
+	<button onclick="startupFunction()">Click me</button><br/>
+	<img src="https://s3.amazonaws.com/triathlon-nerd-serverless-website/swimbikerun.png"/></div>
 	</body>
 </html>	
